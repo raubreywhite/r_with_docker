@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  rstudio:
+    build: r
+    volumes:
+      - $HOME/git/r_with_docker/r/program/:/program/
+    ports:
+      - "8787:8787"
+  r:
+    build: r
+    user: rstudio
+
+
